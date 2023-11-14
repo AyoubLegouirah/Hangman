@@ -12,16 +12,17 @@ const victoiresConsecutivesElement = document.getElementById("VictoireConsecutiv
 const restartButton = document.getElementById("restart");
 
 
+// Afficher message en Rouge
 function afficherMessage(message) {
     const bulle = document.createElement("div");
     bulle.classList.add("bulle");
   
-    // Ajoutez le message à la bulle
+
     const contenuBulle = document.createElement("p");
     contenuBulle.textContent = message;
     bulle.appendChild(contenuBulle);
   
-    // Ajoutez le bouton "x" pour fermer la bulle
+    
     const boutonFermer = document.createElement("button");
     boutonFermer.textContent = "x";
     boutonFermer.addEventListener("click", function () {
@@ -33,19 +34,19 @@ function afficherMessage(message) {
   
     setTimeout(function () {
         bulle.remove();
-    }, 10000); // Supprimez la bulle après 5 secondes (ajustez selon vos besoins)
+    }, 10000); 
 }
-
+// Afficher message en Vert
 function afficherMessageV(message) {
     const bulle = document.createElement("div");
     bulle.classList.add("bulleV");
   
-    // Ajoutez le message à la bulle
+    
     const contenuBulle = document.createElement("p");
     contenuBulle.textContent = message;
     bulle.appendChild(contenuBulle);
   
-    // Ajoutez le bouton "x" pour fermer la bulle
+  
     const boutonFermer = document.createElement("button");
     boutonFermer.textContent = "x";
     boutonFermer.addEventListener("click", function () {
@@ -57,19 +58,19 @@ function afficherMessageV(message) {
   
     setTimeout(function () {
         bulle.remove();
-    }, 10000); // Supprimez la bulle après 5 secondes (ajustez selon vos besoins)
+    }, 10000); 
 }
-
+// Afficher message en Gris
 function afficherMessageG(message) {
     const bulle = document.createElement("div");
     bulle.classList.add("bulleG");
   
-    // Ajoutez le message à la bulle
+   
     const contenuBulle = document.createElement("p");
     contenuBulle.textContent = message;
     bulle.appendChild(contenuBulle);
   
-    // Ajoutez le bouton "x" pour fermer la bulle
+    
     const boutonFermer = document.createElement("button");
     boutonFermer.textContent = "x";
     boutonFermer.addEventListener("click", function () {
@@ -81,31 +82,31 @@ function afficherMessageG(message) {
   
     setTimeout(function () {
         bulle.remove();
-    }, 10000); // Supprimez la bulle après 5 secondes (ajustez selon vos besoins)
+    }, 10000); 
 }
 
 
 
 
 
-
+// Boutique
 const buyHintButton = document.getElementById("buyHint");
-// Ajoutez cet écouteur d'événement pour le bouton "Acheter un indice"
+
 buyHintButton.addEventListener("click", function() {
-    // Vérifiez si l'utilisateur a suffisamment de points pour acheter un indice
-    if (score >= 5) { // Supposons que chaque indice coûte 50 points
-        // Déduisez le coût de l'indice
+    
+    if (score >= 5) { 
+        
         score -= 5;
         scoreElement.textContent = "Score: " + score;
         
-        // Affichez une lettre non encore trouvée en tant qu'indice
+        
         let index = lettresTrouvees.indexOf(false);
         if (index !== -1) {
             lettresTrouvees[index] = true;
             updateWordDisplay();
         }
     } else {
-        // Affichez un message si l'utilisateur n'a pas assez de points
+   
         afficherMessageG("Score insuffisant pour acheter un indice.");
     }
 });
