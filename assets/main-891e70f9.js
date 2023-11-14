@@ -1,0 +1,1 @@
+/* empty css              */document.addEventListener("DOMContentLoaded",function(){const e=document.getElementById("myModal"),n=document.querySelector(".close");e.style.display="block",n.addEventListener("click",function(){e.style.display="none"}),window.addEventListener("click",function(t){t.target===e&&(e.style.display="none")})});
