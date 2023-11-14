@@ -1,0 +1,267 @@
+body {
+    background-color: #fafaf8;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligner à gauche horizontalement */
+    justify-content: flex-start; /* Aligner en haut verticalement */
+    height: 100vh;
+    font-family: 'Playpen Sans', cursive;
+    padding-top: 20px;  
+  }
+  
+  @media (min-width: 600px) {
+    .contenair {
+      margin-left: 40px;
+    }
+    .resultat {
+      margin-left: 30px; 
+      font-size: 30px;
+    }
+    .bordercontainer {
+      box-sizing: border-box;
+      width: 100%;
+      height: 100%;
+      border: 30px solid #7c7c74;
+      /* Choisissez votre couleur et largeur de bordure */
+      padding: 20px;
+      /* Ajustez selon vos besoins */
+    }
+    body {
+      align-items: flex-start;
+      /* Aligner à gauche horizontalement */
+      justify-content: flex-start;
+      /* Aligner en haut verticalement */
+      margin-left: 30%;
+      margin-right: 30%;
+      border: black;
+    }
+  }
+  
+  .contenair {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 5px;
+    width: 300px;
+    padding-right: 80px;
+    order: 2;
+    padding-left: 10px;
+    padding-top: 20px;
+  }
+  
+  .contenair button {
+    font-family: 'Playpen Sans', cursive;
+    background-color: #e9f2f9;
+    border-radius: 8px;
+    border-color: #e9f2f9;
+    font-size: 20px;
+  }
+
+  #buyHint{
+    font-family: 'Playpen Sans', cursive;
+    background-color: #c1c7cf;
+    border-radius: 8px;
+    /* color: #e9f2f9; */
+    border-color: #e9f2f9;
+    font-size: 15px;
+  }
+
+  .home{
+    font-family: 'Playpen Sans', cursive;
+    background-color: #c1c7cf;
+    border-radius: 8px;
+    margin-left: 70%;
+    border-color: #e9f2f9;
+    font-size: 15px;
+    
+  }
+  
+  #m{
+    grid-column: 2
+  }
+  
+  .resultat{
+    padding-left: 150px;
+    font-size: 25px;
+  }
+  
+  .image {
+    width: 200px; /* Ajustez la largeur selon vos besoins */
+    margin-left: 20px; /* Ajustez la marge selon vos besoins */
+    padding-top: 80px;
+  }
+  
+  .container1 {
+    display: flex;
+    margin-bottom: 50px;
+    margin-left: 20px;
+  }
+  
+  .text {
+    flex-grow: 1;
+    margin-left: 0;
+  
+  }
+  
+  .h1{
+    font-size: 30px;
+  }
+  
+  .h3{
+    font-size: 14px;
+  }
+  
+  #Score{
+    font-size: 15px;
+  }
+  
+  #VictoireConsecutive{
+    font-size: 15px;
+    
+  }
+  
+  
+  
+  
+  
+  
+  /* Styles pour la modal */
+  .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.5);
+  }
+  
+  .modal-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #fff;
+      padding: 20px;
+      text-align: center;
+  }
+  
+  /* Style pour le bouton de fermeture de la modal */
+  .close {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 10px;
+      cursor: pointer;
+  }
+
+
+
+  .bulle {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f47087;
+    color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 20px;
+    animation: descend 2s ease-out; /* Durée de la descente */
+    text-align: left; /* Ajustez l'alignement du texte à gauche */
+  }
+  
+  .bulle button {
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    float: right; /* Déplacez le bouton à droite */
+    margin-left: 10px; /* Ajoutez une marge à gauche pour séparer le bouton du texte */
+  }
+  
+  @keyframes descend {
+    from {
+      top: -100px;
+      opacity: 0;
+    }
+    to {
+      top: 50%;
+      opacity: 1;
+    }
+  }
+
+
+
+  .bulleV {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #56f3bc;
+    color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 20px;
+    animation: descend 2s ease-out; /* Durée de la descente */
+    text-align: left; /* Ajustez l'alignement du texte à gauche */
+  }
+  
+  .bulleV button {
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    float: right; /* Déplacez le bouton à droite */
+    margin-left: 10px; /* Ajoutez une marge à gauche pour séparer le bouton du texte */
+  }
+  
+  @keyframes descend {
+    from {
+      top: -100px;
+      opacity: 0;
+    }
+    to {
+      top: 50%;
+      opacity: 1;
+    }
+  }
+  
+
+
+  .bulleG {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #b4b4b4;
+    color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 20px;
+    animation: descend 2s ease-out; /* Durée de la descente */
+    text-align: left; /* Ajustez l'alignement du texte à gauche */
+  }
+  
+  .bulleG button {
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    float: right; /* Déplacez le bouton à droite */
+    margin-left: 10px; /* Ajoutez une marge à gauche pour séparer le bouton du texte */
+  }
+  
+  @keyframes descend {
+    from {
+      top: -100px;
+      opacity: 0;
+    }
+    to {
+      top: 50%;
+      opacity: 1;
+    }
+  }
